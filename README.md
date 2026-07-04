@@ -1,0 +1,33 @@
+# alpha-cloud — Claude Code plugin
+
+把 [alpha 云平台](https://alphacodeone.com) 接进 Claude Code:**云任务派发**(research / 代码审查 / 文档 / 办公文档生成 / 数据分析 / bugfix / 迁移 + 开放式 bounded-agent)与**平台代付模型**。
+
+## 安装
+
+```bash
+# 1. 在 https://alphacodeone.com 登录 → 「API 密钥」页生成 key(勾选 models + cloud)
+export ALPHA_API_KEY="sk-alpha-…"     # 写进你的 shell profile
+
+# 2. 安装 plugin
+claude plugin marketplace add jinjunnn/alpha-code-plugin
+claude plugin install alpha-cloud
+```
+
+装好后获得:MCP 工具 `cloud_dispatch` / `cloud_status` / `cloud_await` / `cloud_artifacts` + 命令 `/alpha-cloud:dispatch`、`/alpha-cloud:status` + 用法 skill。
+
+## 模型面(可选)
+
+把 Claude Code 的模型调用切到平台代付(计费走你的 alpha 账户,会员窗口 → ¥钱包):
+
+```bash
+export ANTHROPIC_BASE_URL="https://alpha-gateway.jinjunnm.workers.dev"
+export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
+```
+
+其他 harness(Codex / Cursor / Cline / Zed / 通用 OpenAI SDK)接入见平台文档 `docs/harness-integration.md`。
+
+## 安全
+
+- key 只存本机环境变量,插件配置经 `${ALPHA_API_KEY}` 展开,仓库内无任何明文。
+- 泄露即刻在 portal 撤销(全网 ≤2 分钟生效)。
+- 云任务受 per-job 硬预算熔断;每次模型调用先预授权,额度尽即拒、不产生费用。

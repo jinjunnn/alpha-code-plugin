@@ -1,0 +1,11 @@
+{
+  "name": "alpha-code-plugin",
+  "owner": { "name": "alpha-platform" },
+  "plugins": [
+    {
+      "name": "alpha-cloud",
+      "source": "./",
+      "description": "alpha 云平台:云任务 MCP 工具 + 平台代付模型接入"
+    }
+  ]
+}

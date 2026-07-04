@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "alpha-cloud": {
+      "type": "http",
+      "url": "https://alpha-cloud.jinjunnm.workers.dev/mcp",
+      "headers": { "Authorization": "Bearer ${ALPHA_API_KEY}" }
+    }
+  }
+}
