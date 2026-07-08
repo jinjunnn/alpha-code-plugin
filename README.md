@@ -20,7 +20,7 @@ claude plugin install alpha-cloud
 把 Claude Code 的模型调用切到平台代付(计费走你的 alpha 账户,会员窗口 → ¥钱包):
 
 ```bash
-export ANTHROPIC_BASE_URL="https://alpha-gateway.jinjunnm.workers.dev"
+export ANTHROPIC_BASE_URL="https://alpha-gateway.tidelabs.click"
 export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
 ```
 
