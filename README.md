@@ -2,6 +2,22 @@
 
 把 [alpha 云平台](https://alphacodeone.com) 接进 Claude Code:**云任务派发**(research / 代码审查 / 文档 / 办公文档生成 / 数据分析 / bugfix / 迁移 + 开放式 bounded-agent)与**平台代付模型**。
 
+本仓只拥有 Claude Code plugin 的 manifest、MCP/command/skill 包装、安装说明与
+发布验证;模型网关、云任务实现、计量和账户逻辑归
+[`alpha-platform`](https://github.com/jinjunnn/alpha-platform),API key 与账户体验归
+[`alpha-web`](https://github.com/jinjunnn/alpha-web)。长期目标见
+[`GOALS.md`](GOALS.md)。
+
+## Delivery governance
+
+- [Repository Issues](https://github.com/jinjunnn/alpha-code-plugin/issues)
+- [Alpha Delivery](https://github.com/users/jinjunnn/projects/2)
+- [Portfolio goals](https://github.com/jinjunnn/alpha-work/blob/main/GOALS.md)
+- [Delivery standard](https://github.com/jinjunnn/alpha-work/blob/main/governance/delivery-standard.md)
+
+GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不维护
+本地需求清单、状态或 Sprint 文档。
+
 ## 安装
 
 ```bash
