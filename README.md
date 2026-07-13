@@ -14,6 +14,8 @@
 - [Alpha Delivery](https://github.com/users/jinjunnn/projects/2)
 - [Portfolio goals](https://github.com/jinjunnn/alpha-work/blob/main/GOALS.md)
 - [Delivery standard](https://github.com/jinjunnn/alpha-work/blob/main/governance/delivery-standard.md)
+- [Documentation contract](https://github.com/jinjunnn/alpha-work/blob/main/governance/documentation-standard.md)
+- [Repository document index](docs/README.md)
 
 GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不维护
 本地需求清单、状态或 Sprint 文档。
@@ -40,7 +42,8 @@ export ANTHROPIC_BASE_URL="https://alpha-gateway.tidelabs.click"
 export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
 ```
 
-其他 harness(Codex / Cursor / Cline / Zed / 通用 OpenAI SDK)接入见平台文档 `docs/harness-integration.md`。
+其他 harness(Codex / Cursor / Cline / Zed / 通用 OpenAI SDK)接入见
+[`alpha-platform` harness contract](https://github.com/jinjunnn/alpha-platform/blob/main/docs/contracts/harness.md)。
 
 ## 安全
 
