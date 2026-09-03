@@ -1,9 +1,9 @@
 ---
 name: alpha-cloud
-description: alpha 云平台用法:云任务派发(cloud_dispatch/status/await/artifacts 四个 MCP 工具)的信封格式、预算护栏、计费语义与错误处理。当用户要求"云端执行/云任务/派发任务到云上",或 cloud_* 工具调用报错需要解释时使用。
+description: Code Puppy 云平台用法:云任务派发(cloud_dispatch/status/await/artifacts 四个 MCP 工具)的信封格式、预算护栏、计费语义与错误处理。当用户要求"云端执行/云任务/派发任务到云上",或 cloud_* 工具调用报错需要解释时使用。
 ---
 
-# alpha 云平台用法
+# Code Puppy 云平台用法
 
 ## 任务信封(cloud_dispatch)
 
@@ -16,11 +16,11 @@ description: alpha 云平台用法:云任务派发(cloud_dispatch/status/await/a
 
 - 云任务**恒计费**(平台代付模型,按账户会员窗口→¥钱包瀑布扣)。
 - 每次模型调用前平台预授权:额度尽 → 402 且**不调模型**(不会产生费用)。
-- 账单按 API key 归因,用户可在 alphacodeone.com portal 查每笔用量。
+- 账单按 API key 归因,用户可在 https://codepuppy.cn/billing 查每笔用量。
 
 ## 错误处理
 
-- 401:ALPHA_API_KEY 无效/已撤销 → 让用户去 portal(alphacodeone.com /keys)重新生成并更新环境变量。
+- 401:ALPHA_API_KEY 无效/已撤销 → 让用户去 https://codepuppy.cn/keys 重新生成并更新环境变量。
 - 402:额度不足 → 充值或等会员窗口重置;job 内 402 = 预算熔断(job_budget)。
 - 403 lacks scope 'cloud':key 缺 cloud scope → 重新生成时勾选「云任务」。
 - 503:计费服务暂不可达(fail-closed 保护钱包)→ 稍后重试。
