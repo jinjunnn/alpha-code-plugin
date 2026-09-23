@@ -31,7 +31,7 @@ claude plugin marketplace add jinjunnn/alpha-code-plugin
 claude plugin install alpha-cloud
 ```
 
-装好后获得:MCP 工具 `cloud_dispatch` / `cloud_status` / `cloud_await` / `cloud_artifacts` + 命令 `/alpha-cloud:dispatch`、`/alpha-cloud:status` + 用法 skill。
+装好后获得:六个 MCP 工具 `cloud_dispatch`(派任务)/ `cloud_status`(查状态)/ `cloud_await`(等结果)/ `cloud_artifacts`(取产物)/ `cloud_cancel`(取消在跑的任务)/ `cloud_web_search`(让平台代为联网搜索,按次计费)+ 命令 `/alpha-cloud:dispatch`、`/alpha-cloud:status` + 用法 skill。
 
 ## 模型面(可选)
 
@@ -50,3 +50,5 @@ export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
 - key 只存本机环境变量,插件配置经 `${ALPHA_API_KEY}` 展开,仓库内无任何明文。
 - 泄露即刻在 https://codepuppy.cn/keys 撤销(全网 ≤2 分钟生效)。
 - 云任务受 per-job 硬预算熔断;每次模型调用先预授权,额度尽即拒、不产生费用。
+- 额度耗尽是**硬拒**,钱包默认不参与 —— 所以**充值不会恢复服务**。恢复的办法是等会员额度窗口重置,
+  或到账户页把「钱包溢出」开关显式打开。
