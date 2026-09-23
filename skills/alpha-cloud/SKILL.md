@@ -21,7 +21,7 @@ description: Code Puppy 云平台用法:云任务派发(cloud_dispatch/status/aw
 
 ## 任务信封(cloud_dispatch)
 
-- `autonomy: "pipeline"` —— 步骤可预先写死的任务。必填 `kind` + `input`。kind 目录:`research`(联网调研)、`code-review`、`docs`、`office-report`(docx/pptx/xlsx)、`data-analysis`(pandas/图表)、`bugfix`(patch+测试)、`migration`(多步重构)。
+- `autonomy: "pipeline"` —— 步骤可预先写死的任务。必填 `kind` + `input`。**有哪些 kind、每种 kind 能填哪些 `input` 字段,读 `cloud_dispatch` 的工具说明** —— 服务端在那里当场广播(形如 `- research.search = ...`),本文件**不再复述**:复述一份就会漂移,而用户会照着漂移的那份填。
 - `autonomy: "bounded-agent"` —— 开放式目标。必填 `objective` + `capabilities[]`(如 `["web_search"]`、`["code_exec"]`;声明能力而非 tier,平台自动路由运行时)。
 - `budget`(可选,从紧):`{max_iter ≤50, max_tokens ≤500000, max_wall_clock_sec ≤1800}`。超预算的任务会被平台硬熔断,表现为**任务进入失败终态**(用户不会自己收到一个 HTTP 状态码 —— 云任务这条路上没有)。
 - `output_schema`(可选):要结构化结果时给 JSON Schema。
