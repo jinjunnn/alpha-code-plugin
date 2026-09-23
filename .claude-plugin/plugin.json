@@ -1,6 +1,6 @@
 {
   "name": "alpha-cloud",
-  "description": "Code Puppy 云平台接入:云任务派发(MCP 工具 cloud_dispatch/status/await/artifacts)+ 平台代付模型接入指引。需要 ALPHA_API_KEY 环境变量(codepuppy.cn/keys 生成)。",
+  "description": "Code Puppy 云平台接入:云任务派发(MCP 工具 cloud_dispatch/status/await/artifacts/cancel/web_search)+ 平台代付模型接入指引。需要 ALPHA_API_KEY 环境变量(codepuppy.cn/keys 生成)。",
   "version": "0.1.0",
   "author": { "name": "alpha-platform" }
 }
